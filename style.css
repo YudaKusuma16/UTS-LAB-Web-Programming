@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    background-image: url('assets/2.png'); /* Ganti dengan path gambar yang benar */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.logo p {
+    font-family: "Lobster", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    font-style: normal;
+}
+
+.board-card {
+    background: rgba(255, 255, 255, 0.9); /* Warna putih dengan sedikit transparansi */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan lebih halus */
+    color: black; /* Teks di dalam board tetap hitam */
+}
+
+/* Task Item */
+.task-item {
+    background: rgba(128, 0, 128, 0.8); /* Warna ungu sesuai background */
+    color: white; /* Teks putih */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* List dan Task Buttons disembunyikan kecuali saat di-hover */
+.task-buttons,
+.list-buttons {
+    display: flex;
+    gap: 10px;
+    visibility: hidden; /* Sembunyikan tombol secara default */
+}
+
+.task-item:hover .task-buttons,
+.list-container:hover .list-buttons {
+    visibility: visible; /* Tampilkan tombol saat di-hover */
+}
+
+/* Styling ikon Edit dan Delete */
+.action-btn {
+    padding: 6px;
+    border: none;
+    background: none;
+    border-radius: 4px;
+    color: #6c757d; /* Warna default sesuai gambar */
+    font-size: 1.2rem; /* Ukuran ikon */
+}
+
+.action-btn:hover {
+    background: rgba(0, 0, 0, 0.1); /* Warna latar belakang saat di-hover */
+    color: #007bff; /* Warna biru saat di-hover */
+}
+
+.action-btn.delete-btn {
+    color: #dc3545; /* Warna merah untuk ikon Delete */
+}
+
+.action-btn.delete-btn:hover {
+    background: rgba(255, 0, 0, 0.2); /* Latar belakang merah muda saat hover */
+    color: #dc3545; /* Tetap merah untuk ikon Delete saat hover */
+}
+
+.add-board-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.task-meta {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+    color: #cbd5e1;
+    font-size: 0.875rem;
+}
+
+.add-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    background: transparent;
+}
+
+.add-btn.primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.add-btn.secondary {
+    border-color: #E2E8F0;
+    color: #64748B;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 250px;
+    padding: 10px;
+    padding-left: 35px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    color: #6c757d;
+}
+
+/* Dropdown styling untuk status Incomplete/Complete *
+
+/* Task Item */
+.task-item {
+    background: rgba(128, 0, 128, 0.8); /* Warna ungu */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Penting untuk positioning */
+}
+
+/* Status Container - Posisi awal di sebelah kanan */
+.status-container {
+    position: relative;
+    z-index: 1; /* Status tetap berada di bawah */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+}
+
+/* Task Buttons - Munculkan di atas status */
+.task-buttons {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2; /* Pastikan tombol berada di atas status */
+    opacity: 0; /* Awalnya tersembunyi */
+    transition: opacity 0.3s ease;
+}
+
+/* Ketika task-item di-hover, munculkan tombol di atas status */
+.task-item:hover .task-buttons {
+    opacity: 1; /* Tampilkan tombol */
+}
+
+.task-item:hover .status-container {
+    opacity: 0.5; /* Kurangi opacity status agar terlihat di bawah */
+}
+
+/* Tombol Edit dan Delete */
+.action-btn {
+    padding: 6px;
+    border: none;
+    background: none;
+    border-radius: 4px;
+    color: #6c757d;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.1); /* Latar belakang saat muncul */
+}
+
+.action-btn.delete-btn {
+    color: #dc3545;
+}
+
+.action-btn.delete-btn:hover {
+    background: rgba(255, 0, 0, 0.2);
+    color: #dc3545;
+}
+
+/* index.html */
+
+
+/* login */
